@@ -1,5 +1,7 @@
-import MagicRings from './MagicRings.jsx';
+﻿import MagicRings from './MagicRings.jsx';
 import './Hero.css';
+
+const BASE = import.meta.env.BASE_URL;
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -8,7 +10,11 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
-      <img className="hero-bg-image" src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`} alt="" aria-hidden="true" loading="lazy" />
+      <picture>
+        <source media="(max-width: 768px)" srcSet={`${BASE}images/hero-bg-mobile.webp`} type="image/webp" />
+        <source srcSet={`${BASE}images/hero-bg.webp`} type="image/webp" />
+        <img className="hero-bg-image" src={`${BASE}images/hero-bg.jpg`} alt="" aria-hidden="true" fetchpriority="high" />
+      </picture>
       <div className="hero-dim-overlay" />
       <div className="hero-rings-bg">
         <MagicRings
@@ -58,7 +64,3 @@ export default function Hero() {
     </section>
   );
 }
-
-
-
-

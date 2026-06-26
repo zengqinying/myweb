@@ -1,6 +1,7 @@
-import './Projects.css';
+﻿import './Projects.css';
 import VideoGallery from './VideoGallery.jsx';
 import ShinyText from './ShinyText.jsx';
+const BASE = import.meta.env.BASE_URL;
 import StarBorder from './StarBorder.jsx';
 const PROJECTS = [
   {
@@ -165,6 +166,7 @@ export default function Projects() {
     </section>
   );
 }
+
 
 
 

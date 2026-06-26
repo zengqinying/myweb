@@ -1,4 +1,5 @@
-﻿.hero {
+.hero {
+  background: #050508;
   position: relative;
   min-height: 100vh;
   display: flex;

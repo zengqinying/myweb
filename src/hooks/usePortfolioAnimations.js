@@ -11,6 +11,17 @@ export default function usePortfolioAnimations() {
   useEffect(() => {
     if (initialized.current) return;
     initialized.current = true;
+    // Respect user's reduced-motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      // Make all animated elements visible immediately
+      document.querySelectorAll('[data-animate]').forEach((el) => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.style.clipPath = 'none';
+      });
+      return;
+    }
 
     // smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((a) => {

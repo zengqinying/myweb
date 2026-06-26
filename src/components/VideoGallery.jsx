@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect, useCallback } from "react";
+const BASE = import.meta.env.BASE_URL;
 import "./VideoGallery.css";
 
 const VIDEOS = [
-  { src: "/videos/emotion-robot-1.mp4", label: "样机演示 01" },
-  { src: "/videos/emotion-robot-2.mp4", label: "样机演示 02" },
-  { src: "/videos/emotion-robot-3.mp4", label: "样机演示 03" },
-  { src: "/videos/emotion-robot-4.mp4", label: "样机演示 04" },
-  { src: "/videos/emotion-robot-5.mp4", label: "样机演示 05" },
+  { src: `${BASE}videos/emotion-robot-1.mp4`, label: "样机演示 01" },
+  { src: `${BASE}videos/emotion-robot-2.mp4`, label: "样机演示 02" },
+  { src: `${BASE}videos/emotion-robot-3.mp4`, label: "样机演示 03" },
+  { src: `${BASE}videos/emotion-robot-4.mp4`, label: "样机演示 04" },
+  { src: `${BASE}videos/emotion-robot-5.mp4`, label: "样机演示 05" },
 ];
 
 export default function VideoGallery({ compact = false }) {

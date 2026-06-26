@@ -21,7 +21,7 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <section id="projects" className="projects">
-      <div className="projects-bg" style={{ backgroundImage: "url(/images/projects-bg.png)", opacity: 0.3 }} />
+      <div className="projects-bg" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/projects-bg.png)`, opacity: 0.3 }} />
       <div className="container">
         <div className="projects-header">
           <span className="section-label" data-animate="section-label">Projects</span>
@@ -40,8 +40,8 @@ export default function Projects() {
             <div className="video-container" data-animate="reveal">
               <video
                 className="video-player"
-                src="/videos/northbureau.mp4"
-                poster="/images/northbureau-poster.jpg"
+                src={`${import.meta.env.BASE_URL}videos/northbureau.mp4`}
+                poster={`${import.meta.env.BASE_URL}images/northbureau-poster.jpg`}
                 controls
                 preload="metadata"
                 playsInline
@@ -102,8 +102,8 @@ export default function Projects() {
             <div className="video-container" data-animate="reveal">
               <video
                 className="video-player"
-                src="/videos/innovation-project.mp4"
-                poster="/images/innovation-project-poster.jpg"
+                src={`${import.meta.env.BASE_URL}videos/innovation-project.mp4`}
+                poster={`${import.meta.env.BASE_URL}images/innovation-project-poster.jpg`}
                 controls
                 preload="metadata"
                 playsInline
@@ -134,8 +134,8 @@ export default function Projects() {
             <div className="video-container" data-animate="reveal">
               <video
                 className="video-player"
-                src="/videos/exhibition-hall.mp4"
-                poster="/images/exhibition-hall-poster.jpg"
+                src={`${import.meta.env.BASE_URL}videos/exhibition-hall.mp4`}
+                poster={`${import.meta.env.BASE_URL}images/exhibition-hall-poster.jpg`}
                 controls
                 preload="metadata"
                 playsInline

@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
-      <img className="hero-bg-image" src="/images/hero-bg.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img className="hero-bg-image" src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`} alt="" aria-hidden="true" loading="lazy" />
       <div className="hero-dim-overlay" />
       <div className="hero-rings-bg">
         <MagicRings
